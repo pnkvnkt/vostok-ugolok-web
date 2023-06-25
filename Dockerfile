@@ -8,4 +8,4 @@ RUN npm install -g serve
 
 ADD /build ./
 
-ENTRYPOINT [ "serve", "-s", "-p", "5000", "build" ]
+ENTRYPOINT [ "npx", "serve", "-s", "-p", "5000", "." ]
