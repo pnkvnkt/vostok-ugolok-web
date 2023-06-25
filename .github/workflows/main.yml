@@ -1,0 +1,18 @@
+on:
+  push: 
+    branches:
+      - main
+  workflow_dispatch: 
+      
+jobs: 
+  download:
+    name: Download
+    runs-on: self-hosted
+    steps:
+      - run: bash ~/actions-runner/vostok-ugolok-web/download.sh
+  start:
+    needs: download
+    runs-on: self-hosted
+    name: Start server
+    steps:
+      - run: bash ~/actions-runner/vostok-ugolok-web/startup.sh
