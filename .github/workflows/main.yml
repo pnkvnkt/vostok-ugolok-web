@@ -9,10 +9,10 @@ jobs:
     name: Download
     runs-on: self-hosted
     steps:
-      - run: bash ~/github-ci/vostok-ugolok-web/download.sh
+      - run: bash ~/actions-runner/vostok-ugolok-web/download.sh
   start:
     needs: download
     runs-on: self-hosted
     name: Start server
     steps:
-      - run: bash ~/github-ci/vostok-ugolok-web/startup.sh
+      - run: bash ~/actions-runner/vostok-ugolok-web/startup.sh
